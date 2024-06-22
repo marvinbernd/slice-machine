@@ -39,8 +39,8 @@ beforeEach(async (ctx) => {
 			options: {},
 		},
 		libraries: ["./slices"],
-		repositoryName: "qwerty",
-		apiEndpoint: "https://qwerty.cdn.prismic.io/api/v2",
+		repositoryName: "slicemachine-e2e-gatsby",
+		apiEndpoint: "https://slicemachine-e2e-gatsby.cdn.prismic.io/api/v2",
 	} satisfies SliceMachineConfig;
 
 	await fs.writeFile(
