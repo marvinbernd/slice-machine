@@ -30,8 +30,6 @@ export const upsertSliceLibraryIndexFile = async (
 		contents = stripIndent`
 			${NON_EDITABLE_FILE_BANNER}
 
-			import dynamic from 'next/dynamic'
-
 			export const components = {
 				${(
 					await Promise.all(
@@ -45,7 +43,7 @@ export const upsertSliceLibraryIndexFile = async (
 								}),
 							);
 
-							return `${id}: dynamic(() => import('./${dirName}'))`;
+							return `${id}: React.lazy(() => import("./${dirName}"))`;
 						}),
 					)
 				).join(",\n")}

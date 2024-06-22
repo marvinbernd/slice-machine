@@ -16,7 +16,6 @@ test("installs dependencies", async (ctx) => {
 		dependencies: {
 			"@prismicio/client": "latest",
 			"@prismicio/react": "latest",
-			"@prismicio/next": "latest",
 		},
 	});
 });

@@ -41,12 +41,6 @@ import { projectInit } from "./hooks/project-init";
 import { sliceCreate } from "./hooks/slice-create";
 import { snippetRead } from "./hooks/snippet-read";
 
-// Slice Template Library
-import * as Hero from "./sliceTemplates/Hero";
-import * as CallToAction from "./sliceTemplates/CallToAction";
-import * as AlternateGrid from "./sliceTemplates/AlternateGrid";
-import * as CustomerLogos from "./sliceTemplates/CustomerLogos";
-
 export const plugin = defineSliceMachinePlugin<PluginOptions>({
 	meta: {
 		name: pkgName,
@@ -206,7 +200,7 @@ export const plugin = defineSliceMachinePlugin<PluginOptions>({
 				...data,
 				...context,
 				dirName: path.dirname(fileURLToPath(new URL(import.meta.url))),
-				templates: [Hero, CustomerLogos, AlternateGrid, CallToAction],
+				templates: [],
 				componentFileNames: {
 					js: "javascript.jsx",
 					ts: "typescript.tsx",

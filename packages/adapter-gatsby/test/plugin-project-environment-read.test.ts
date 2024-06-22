@@ -8,7 +8,7 @@ import adapter from "../src";
 test("returns the active environment", async (ctx) => {
 	await fs.writeFile(
 		path.join(ctx.project.root, ".env.local"),
-		"NEXT_PUBLIC_PRISMIC_ENVIRONMENT=foo",
+		"GATSBY_PUBLIC_PRISMIC_ENVIRONMENT=foo",
 	);
 
 	const res = await ctx.pluginRunner.callHook(
@@ -19,22 +19,22 @@ test("returns the active environment", async (ctx) => {
 	expect(res.data[0].environment).toBe("foo");
 });
 
-test("follows Next.js' env file priority", async (ctx) => {
+test("follows Gatsby env file priority", async (ctx) => {
 	await fs.writeFile(
 		path.join(ctx.project.root, ".env"),
-		"NEXT_PUBLIC_PRISMIC_ENVIRONMENT=root",
+		"GATSBY_PUBLIC_PRISMIC_ENVIRONMENT=root",
 	);
 	await fs.writeFile(
 		path.join(ctx.project.root, ".env.development"),
-		"NEXT_PUBLIC_PRISMIC_ENVIRONMENT=development",
+		"GATSBY_PUBLIC_PRISMIC_ENVIRONMENT=development",
 	);
 	await fs.writeFile(
 		path.join(ctx.project.root, ".env.local"),
-		"NEXT_PUBLIC_PRISMIC_ENVIRONMENT=local",
+		"GATSBY_PUBLIC_PRISMIC_ENVIRONMENT=local",
 	);
 	await fs.writeFile(
 		path.join(ctx.project.root, ".env.development.local"),
-		"NEXT_PUBLIC_PRISMIC_ENVIRONMENT=development.local",
+		"GATSBY_PUBLIC_PRISMIC_ENVIRONMENT=development.local",
 	);
 
 	const res = await ctx.pluginRunner.callHook(
@@ -57,7 +57,7 @@ test("reads from the configured file path", async (ctx) => {
 
 	await fs.writeFile(
 		path.join(ctx.project.root, ".bar"),
-		"NEXT_PUBLIC_PRISMIC_ENVIRONMENT=foo",
+		"GATSBY_PUBLIC_PRISMIC_ENVIRONMENT=foo",
 	);
 
 	const res = await pluginRunner.callHook(

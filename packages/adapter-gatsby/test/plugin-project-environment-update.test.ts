@@ -15,7 +15,7 @@ test("writes the environment to the default env file", async (ctx) => {
 		"utf8",
 	);
 
-	expect(contents).toMatch(/^NEXT_PUBLIC_PRISMIC_ENVIRONMENT=foo$/m);
+	expect(contents).toMatch(/^GATSBY_PUBLIC_PRISMIC_ENVIRONMENT=foo$/m);
 });
 
 test("writes the environment to the configured env file", async (ctx) => {
@@ -37,13 +37,13 @@ test("writes the environment to the configured env file", async (ctx) => {
 		"utf8",
 	);
 
-	expect(contents).toMatch(/^NEXT_PUBLIC_PRISMIC_ENVIRONMENT=foo$/m);
+	expect(contents).toMatch(/^GATSBY_PUBLIC_PRISMIC_ENVIRONMENT=foo$/m);
 });
 
 test("updates the variable if the variable exists", async (ctx) => {
 	await fs.writeFile(
 		path.join(ctx.project.root, ".env.local"),
-		"NEXT_PUBLIC_PRISMIC_ENVIRONMENT=foo",
+		"GATSBY_PUBLIC_PRISMIC_ENVIRONMENT=foo",
 	);
 
 	await ctx.pluginRunner.callHook("project:environment:update", {
@@ -55,7 +55,7 @@ test("updates the variable if the variable exists", async (ctx) => {
 		"utf8",
 	);
 
-	expect(contents).toMatch(/^NEXT_PUBLIC_PRISMIC_ENVIRONMENT=bar$/m);
+	expect(contents).toMatch(/^GATSBY_PUBLIC_PRISMIC_ENVIRONMENT=bar$/m);
 });
 
 test("appends the variable if other variables exist", async (ctx) => {
@@ -71,13 +71,13 @@ test("appends the variable if other variables exist", async (ctx) => {
 	);
 
 	expect(contents).toMatch(/^FOO=bar$/m);
-	expect(contents).toMatch(/^NEXT_PUBLIC_PRISMIC_ENVIRONMENT=foo$/m);
+	expect(contents).toMatch(/^GATSBY_PUBLIC_PRISMIC_ENVIRONMENT=foo$/m);
 });
 
 test("removes the variable if the environment is undefined", async (ctx) => {
 	await fs.writeFile(
 		path.join(ctx.project.root, ".env.local"),
-		"NEXT_PUBLIC_PRISMIC_ENVIRONMENT=foo",
+		"GATSBY_PUBLIC_PRISMIC_ENVIRONMENT=foo",
 	);
 
 	await ctx.pluginRunner.callHook("project:environment:update", {
@@ -89,7 +89,7 @@ test("removes the variable if the environment is undefined", async (ctx) => {
 		"utf8",
 	);
 
-	expect(contents).not.toMatch(/^NEXT_PUBLIC_PRISMIC_ENVIRONMENT=/m);
+	expect(contents).not.toMatch(/^GATSBY_PUBLIC_PRISMIC_ENVIRONMENT=/m);
 });
 
 test("does nothing if the environment is undefined and the env file does not exist", async (ctx) => {
