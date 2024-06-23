@@ -30,6 +30,8 @@ export const upsertSliceLibraryIndexFile = async (
 		contents = stripIndent`
 			${NON_EDITABLE_FILE_BANNER}
 
+			import React from "react";
+
 			export const components = {
 				${(
 					await Promise.all(

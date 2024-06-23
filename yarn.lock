@@ -5284,6 +5284,50 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@marvinbernd/adapter-gatsby@workspace:*, @marvinbernd/adapter-gatsby@workspace:packages/adapter-gatsby":
+  version: 0.0.0-use.local
+  resolution: "@marvinbernd/adapter-gatsby@workspace:packages/adapter-gatsby"
+  dependencies:
+    "@prismicio/mock": 0.2.0
+    "@prismicio/simulator": ^0.1.4
+    "@prismicio/types-internal": ^2.4.1
+    "@size-limit/preset-small-lib": 8.2.4
+    "@slicemachine/plugin-kit": "workspace:*"
+    "@types/common-tags": 1.8.1
+    "@types/react": 18.0.28
+    "@typescript-eslint/eslint-plugin": 5.55.0
+    "@typescript-eslint/parser": 5.55.0
+    "@vitejs/plugin-react": 3.1.0
+    "@vitest/coverage-v8": 0.32.0
+    common-tags: ^1.8.2
+    depcheck: 1.4.3
+    eslint: 8.37.0
+    eslint-config-prettier: 9.0.0
+    eslint-plugin-prettier: 5.0.1
+    eslint-plugin-tsdoc: 0.2.17
+    fp-ts: ^2.13.1
+    gatsby-plugin-image: 3.13.1
+    io-ts: ^2.2.20
+    io-ts-types: ^0.5.19
+    lz-string: 1.5.0
+    monocle-ts: ^2.3.13
+    newtype-ts: ^0.3.5
+    pascal-case: ^3.1.2
+    prettier: 3.0.3
+    prettier-plugin-jsdoc: 1.1.1
+    prismic-ts-codegen: ^0.1.17
+    react: 18.2.0
+    rollup-plugin-preserve-directives: 0.2.0
+    size-limit: 8.2.4
+    typescript: 4.9.5
+    vite: 4.3.9
+    vite-plugin-sdk: 0.1.1
+    vitest: 0.32.0
+  peerDependencies:
+    react: ^17 || ^18 || ^19.0.0-rc.0
+  languageName: unknown
+  linkType: soft
+
 "@mdx-js/react@npm:^2.1.5":
   version: 2.3.0
   resolution: "@mdx-js/react@npm:2.3.0"
@@ -10094,50 +10138,6 @@ __metadata:
   checksum: ecb421bf1fc41e6f6b1ab1b54bc1ad22b9214bc8fedb280630e0e9ba3f750a5d91dff18e1db44208b39ccac0f80949236213587c453013956feb3c19a8b353da
   languageName: node
   linkType: hard
-
-"@slicemachine/adapter-gatsby@workspace:*, @slicemachine/adapter-gatsby@workspace:packages/adapter-gatsby":
-  version: 0.0.0-use.local
-  resolution: "@slicemachine/adapter-gatsby@workspace:packages/adapter-gatsby"
-  dependencies:
-    "@prismicio/mock": 0.2.0
-    "@prismicio/simulator": ^0.1.4
-    "@prismicio/types-internal": ^2.4.1
-    "@size-limit/preset-small-lib": 8.2.4
-    "@slicemachine/plugin-kit": "workspace:*"
-    "@types/common-tags": 1.8.1
-    "@types/react": 18.0.28
-    "@typescript-eslint/eslint-plugin": 5.55.0
-    "@typescript-eslint/parser": 5.55.0
-    "@vitejs/plugin-react": 3.1.0
-    "@vitest/coverage-v8": 0.32.0
-    common-tags: ^1.8.2
-    depcheck: 1.4.3
-    eslint: 8.37.0
-    eslint-config-prettier: 9.0.0
-    eslint-plugin-prettier: 5.0.1
-    eslint-plugin-tsdoc: 0.2.17
-    fp-ts: ^2.13.1
-    gatsby-plugin-image: 3.13.1
-    io-ts: ^2.2.20
-    io-ts-types: ^0.5.19
-    lz-string: 1.5.0
-    monocle-ts: ^2.3.13
-    newtype-ts: ^0.3.5
-    pascal-case: ^3.1.2
-    prettier: 3.0.3
-    prettier-plugin-jsdoc: 1.1.1
-    prismic-ts-codegen: ^0.1.17
-    react: 18.2.0
-    rollup-plugin-preserve-directives: 0.2.0
-    size-limit: 8.2.4
-    typescript: 4.9.5
-    vite: 4.3.9
-    vite-plugin-sdk: 0.1.1
-    vitest: 0.32.0
-  peerDependencies:
-    react: ^17 || ^18 || ^19.0.0-rc.0
-  languageName: unknown
-  linkType: soft
 
 "@slicemachine/adapter-next@workspace:*, @slicemachine/adapter-next@workspace:packages/adapter-next":
   version: 0.0.0-use.local
@@ -23184,7 +23184,7 @@ __metadata:
   dependencies:
     "@emotion/react": ^11.11.4
     "@emotion/styled": ^11.11.5
-    "@slicemachine/adapter-gatsby": "workspace:*"
+    "@marvinbernd/adapter-gatsby": "workspace:*"
     "@types/node": ^20.11.19
     "@types/react": ^18.2.55
     "@types/react-dom": ^18.2.19

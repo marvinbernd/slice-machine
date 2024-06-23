@@ -1,5 +1,5 @@
 {
-	"name": "@slicemachine/adapter-gatsby",
+	"name": "@marvinbernd/adapter-gatsby",
 	"version": "0.0.0",
 	"description": "Slice Machine adapter for Gatsby.",
 	"keywords": [
@@ -8,7 +8,7 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "ssh://git@github.com/prismicio/slice-machine.git",
+		"url": "ssh://git@github.com/marvinbernd/slice-machine.git",
 		"directory": "packages/adapter-gatsby"
 	},
 	"license": "Apache-2.0",

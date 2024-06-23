@@ -1,4 +1,4 @@
-# @slicemachine/adapter-gatsby
+# @marvinbernd/adapter-gatsby
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -24,7 +24,7 @@ Non-breaking space: &nbsp; are here on purpose to fix emoji rendering on certain
 ## Install
 
 ```bash
-npm install --save-dev @slicemachine/adapter-gatsby
+npm install --save-dev @marvinbernd/adapter-gatsby
 ```
 
 ## Documentation
